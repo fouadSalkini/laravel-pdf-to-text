@@ -27,8 +27,12 @@ class DefaultController extends Controller
         // tesseract pdf method supports arabic
 
         // install libraries
+        //macos
         // wget https://github.com/tesseract-ocr/tessdata_best/raw/main/ara.traineddata -P /usr/local/share/tessdata/
         // echo 'export TESSDATA_PREFIX=/usr/local/share/' >> ~/.bashrc
+        // ubuntu 
+        // apt install tesseract-ocr
+        // apt install tesseract-ocr-ara
 
 
         // $text = (new TesseractOCR('pdf/arabic.png'))
