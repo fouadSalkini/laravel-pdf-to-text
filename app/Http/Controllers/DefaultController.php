@@ -45,7 +45,8 @@ class DefaultController extends Controller
 
         $pages = $pdf->getNumberOfPages(); //returns an int
 
-        for ($i = 1; $i <= $pages; $i++) {
+        $i = 1;
+        //for ($i = 1; $i <= $pages; $i++) {
             $imgpath = "pdf/images/arabic.pdf/img-{$i}.png";
             $pdf->setPage($i)
                 ->saveImage($imgpath);
@@ -53,7 +54,7 @@ class DefaultController extends Controller
             $text .= (new TesseractOCR($imgpath))
             ->lang('ara')
             ->run();
-        }
+        //}
 
 
         return view('welcome', compact('text'));
