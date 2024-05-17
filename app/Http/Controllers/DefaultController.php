@@ -13,7 +13,7 @@ class DefaultController extends Controller
     /**
      * Show the form for creating the resource.
      */
-    public function pdf()
+    public function pdf(Request $request)
     {
 
         $text = "";
@@ -45,7 +45,7 @@ class DefaultController extends Controller
 
         $pages = $pdf->getNumberOfPages(); //returns an int
 
-        $i = 7;
+        $i = $request->page ?? 3;
         //for ($i = 1; $i <= $pages; $i++) {
             $imgpath = "pdf/images/arabic.pdf/img-{$i}.png";
             $pdf->setPage($i)
