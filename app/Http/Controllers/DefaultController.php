@@ -45,7 +45,7 @@ class DefaultController extends Controller
 
         $pages = $pdf->getNumberOfPages(); //returns an int
 
-        $i = 1;
+        $i = 7;
         //for ($i = 1; $i <= $pages; $i++) {
             $imgpath = "pdf/images/arabic.pdf/img-{$i}.png";
             $pdf->setPage($i)
